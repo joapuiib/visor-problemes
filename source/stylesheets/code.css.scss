@@ -1,0 +1,36 @@
+
+.code {
+  padding: 12px;
+  border: 1px dashed #ccc;
+}
+.code pre {
+    margin: 0;
+}
+
+.toolbar-container {
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: relative
+}
+
+.toolbar-container .toolbar {
+    background-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #888;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3px
+}
+
+.toolbar-container .toolbar i {
+    cursor: pointer;
+    color: #446e9b
+}
+
+:hover>.toolbar-container {
+    display: block
+}
+

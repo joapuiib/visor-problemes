@@ -1,0 +1,15 @@
+<%# Remember to add the code.css to the :assets %>
+<%# content_for :assets do %>
+  <%#= stylesheet_link_tag 'code' %>
+<%# end %>
+
+<div class="code">
+  <div id="toolbarTemplate" class="toolbar-container">
+    <div class="toolbar">
+      <i id="toolbarSelectButton" title="Seleccionar tot" class="icon icon-align-justify icon-fixed-width">
+        <%#= image_tag 'selectAll.svg' %>
+      </i>
+    </div>
+  </div>
+  <pre <%= if defined?(pre_id) then "id=#{pre_id}" end %> ><%= if defined?(content) then "#{content}" end %></pre>
+</div>
