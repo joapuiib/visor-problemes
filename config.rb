@@ -23,7 +23,7 @@ end
 activate :external_pipeline,
    name: :webpack,
    command: build? ? 'npm run build' : 'npm run start',
-   source: '.tmp/dist',
+   source: '.dist',
    latency: 1
 
 set :js_dir, 'javascripts'

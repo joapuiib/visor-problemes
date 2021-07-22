@@ -1,14 +1,14 @@
 <%# Remember to add the code.css to the :assets %>
 <%# content_for :assets do %>
   <%#= stylesheet_link_tag 'code' %>
+  <%#= javascript_include_tag 'code' %>
 <%# end %>
 
 <div class="code">
-  <div id="toolbarTemplate" class="toolbar-container">
+  <div class="toolbar-container">
     <div class="toolbar">
-      <i id="toolbarSelectButton" title="Seleccionar tot" class="icon icon-align-justify icon-fixed-width">
-        <%#= image_tag 'selectAll.svg' %>
-      </i>
+      <img src="/images/selectAll.svg" title="Seleccionar tot" onclick="selectAll(event)">
+      <img src="/images/copy.svg" title="Copiar a porta-retalls" onclick="copyClipboard(event)">
     </div>
   </div>
   <pre <%= if defined?(pre_id) then "id=#{pre_id}" end %> ><%= if defined?(content) then "#{content}" end %></pre>

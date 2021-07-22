@@ -1,0 +1,35 @@
+{
+  "name": "visor_problemes",
+  "version": "1.0.0",
+  "description": "Programming problems viewer static site",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack --watch --progress --color",
+    "build": "webpack --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joapuiib/visor-problemes.git"
+  },
+  "author": "",
+  "license": "GNU-GPT",
+  "bugs": {
+    "url": "https://github.com/joapuiib/visor-problemes/issues"
+  },
+  "homepage": "https://github.com/joapuiib/visor-problemes#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "glob": "^7.1.7",
+    "jquery": "^3.6.0",
+    "mini-css-extract-plugin": "^2.1.0",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.45.1",
+    "webpack-remove-empty-scripts": "^0.7.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.7.2"
+  }
+}

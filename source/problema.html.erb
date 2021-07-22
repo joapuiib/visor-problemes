@@ -3,7 +3,8 @@ title: Problema
 ---
 
 <% content_for :assets do %>
-  <%= stylesheet_link_tag 'code', 'tab' %>
+  <%= stylesheet_link_tag 'tab', 'code' %>
+  <%= javascript_include_tag 'tab', 'code' %>
 <% end %>
 
 <header>
@@ -15,48 +16,18 @@ title: Problema
   <h1>Problema de test</h1>
 </div>
 
-<div id="testcases">
-  <h2>Casos de prova</h2>
-  <div class="tab">
-    <button class="tablinks" onclick="loadTestcase(event, 'Set1')">Set1</button>
-    <button class="tablinks" onclick="loadTestcase(event, 'Set2')">Set2</button>
-    <button class="tablinks" onclick="loadTestcase(event, 'Set3')">Set3</button>
-  </div>
-  <div class="row">
-    <div id="entrada" class="column">
-      <h3>Entrada:</h3>
-      <%= partial("/components/code", locals: {pre_id: "testcase_entrada"}) %>
-    </div>
-    <div id="eixida" class="column">
-      <h3>Eixida:</h3>
-      <%= partial("/components/code", locals: {pre_id: "testcase_eixida"}) %>
-    </div>
-  </div>
-
-<div id="entradaSet1" class="tabcontent">5
-5
-6
-7
-8
-9
-</div>
-<div id="eixidaSet1" class="tabcontent">10
-</div>
-
-<div id="entradaSet2" class="tabcontent">1
-2
-3
-</div>
-<div id="eixidaSet2" class="tabcontent">9
-</div>
-
-<div id="entradaSet3" class="tabcontent">5
-4
-5
-</div>
-<div id="eixidaSet3" class="tabcontent">2
-3
-</div>
-
-</div>
+<% testcases = [
+  {
+    title: "Set1",
+    in: "1\n2\n3\n4\n",
+    out: "5\n"
+  },
+  {
+    title: "Set2",
+    in: "5\n6\n",
+    out: "1\n2\n"
+  },
+] %>
+<%= partial("/components/tab", locals: {id: "testcase1", testcases: testcases}) %>
+<%= partial("/components/tab", locals: {id: "testcase2", testcases: testcases}) %>
 <div class="container">

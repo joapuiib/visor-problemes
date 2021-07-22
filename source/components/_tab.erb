@@ -1,0 +1,34 @@
+<%# Remember to add the code.css to the :assets %>
+<%# content_for :assets do %>
+  <%#= stylesheet_link_tag 'tab' %>
+  <%#= javascript_include_tag 'tab' %>
+<%# end %>
+
+<% id ||= "testcases" %>
+<% testcases ||= [] %>
+
+<div id=<%= "#{id}" %>>
+  <h2>Casos de prova</h2>
+  <div class="tab_header">
+    <% testcases.each_with_index do |testcase, index| %>
+      <button <%= if index == 0 then "id=#{id}_defaultOpen" end %> class="tablinks" onclick="loadTestcase(event, '<%=id%>', '<%=testcase.title%>')"><%=testcase.title%></button>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h3>In:</h3>
+      <%= partial("/components/code", locals: {pre_id: "#{id}_in"}) %>
+    </div>
+    <div class="column">
+      <h3>Out:</h3>
+      <%= partial("/components/code", locals: {pre_id: "#{id}_out"}) %>
+    </div>
+  </div>
+
+  <% testcases.each do |testcase| %>
+    <div id=<%="#{id}_in_#{testcase.title}"%> class="tabcontent"><%=testcase.in%></div>
+    <div id=<%="#{id}_out_#{testcase.title}"%> class="tabcontent"><%=testcase.out%></div>
+  <% end %>
+
+  <script>document.getElementById('<%="#{id}_defaultOpen"%>').click();</script>
+</div>

@@ -1,12 +1,12 @@
 /* Style the tab */
-.tab {
+.tab_header {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
 
 /* Style the buttons that are used to open the tab content */
-.tab button {
+.tab_header button {
   background-color: inherit;
   float: left;
   border: none;
@@ -17,12 +17,12 @@
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.tab_header button:hover {
   background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+.tab_header button.active {
   background-color: #ccc;
 }
 
