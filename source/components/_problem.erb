@@ -1,0 +1,18 @@
+<%# content_for :assets do %>
+  <%#= stylesheet_link_tag 'tab', 'code' %>
+  <%#= javascript_include_tag 'tab', 'code' %>
+<%# end %>
+
+<% problem ||= {} %>
+<% problem['name'] ||= "Títol no definit" %>
+<% problem['enunciat'] ||= "Enunciat no definit" %>
+<% problem['tests'] ||= [] %>
+
+<div class="problem-container">
+  <div id="enunciat">
+    <!--h1><%= problem.name %></h1-->
+      <%= markdown problem.postscript %>
+  </div>
+
+  <%= partial("/components/tab", locals: {id: "testcase1", testcases: problem['tests'].select {|test| !test['name'].start_with?("_")}}) %>
+</div>

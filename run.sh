@@ -1,15 +1,17 @@
 #!/bin/bash
 
-BUILD=0
-ARGS=
+ARGS="server"
 
 while [ $# -gt 0 ] ; do
     case $1 in
         -b)
-            BUILD=1
+            ARGS="build"
             ;;
         -d)
-            ARGS="-e :development false"
+            ARGS="$ARGS -e :development false"
+            ;;
+        console)
+            ARGS="console"
             ;;
         *)
             ARGS="$ARGS $1"
@@ -18,8 +20,4 @@ while [ $# -gt 0 ] ; do
     shift
 done
 
-if [ $BUILD -eq 1 ]; then
-    bundle exec middleman build $ARGS
-else
-    bundle exec middleman server $ARGS
-fi
+bundle exec middleman $ARGS

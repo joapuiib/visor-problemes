@@ -11,23 +11,4 @@ title: Problema
 <%= partial("/components/nav") %>
 </header>
 
-<div class="container">
-<div id="enunciat">
-  <h1>Problema de test</h1>
-</div>
-
-<% testcases = [
-  {
-    title: "Set1",
-    in: "1\n2\n3\n4\n",
-    out: "5\n"
-  },
-  {
-    title: "Set2",
-    in: "5\n6\n",
-    out: "1\n2\n"
-  },
-] %>
-<%= partial("/components/tab", locals: {id: "testcase1", testcases: testcases}) %>
-<%= partial("/components/tab", locals: {id: "testcase2", testcases: testcases}) %>
-<div class="container">
+<%= partial("/components/problem", locals: {problem: data.problemes.exemple_problema["00_AirContamination"]}) %>

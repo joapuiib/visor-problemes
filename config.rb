@@ -29,3 +29,12 @@ activate :external_pipeline,
 set :js_dir, 'javascripts'
 set :css_dir, 'stylesheets'
 set :fonts_dir, 'fonts'
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+helpers do 
+  def markdown(text=nil)
+    text ||= yield
+    return Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true).render(text)
+  end
+end
