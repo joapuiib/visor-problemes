@@ -17,6 +17,7 @@ set :relative_links, true
 
 configure :build do
   set :build_dir, 'build'
+  set :base_url, 'visor-problemes'
   activate :relative_assets
 end
 
