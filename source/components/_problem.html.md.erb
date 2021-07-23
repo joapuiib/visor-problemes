@@ -8,11 +8,12 @@
 <% problem['enunciat'] ||= "Enunciat no definit" %>
 <% problem['tests'] ||= [] %>
 
-<div class="problem-container">
-  <div id="enunciat">
-    <!--h1><%= problem.name %></h1-->
-      <%= markdown problem.postscript %>
-  </div>
+# Hola
 
-  <%= partial("/components/tab", locals: {id: "testcase1", testcases: problem['tests'].select {|test| !test['name'].start_with?("_")}}) %>
+{::options parse_block_html="true" /}
+<div class="problem-container">
+<%= problem.postscript %>
+{::options parse_block_html="false" /}
+
+<%= partial("/components/tab", locals: {id: "testcase1", testcases: problem['tests'].select {|test| !test['name'].start_with?("_")}}) %>
 </div>

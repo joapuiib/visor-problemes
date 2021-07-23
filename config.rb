@@ -30,8 +30,8 @@ set :js_dir, 'javascripts'
 set :css_dir, 'stylesheets'
 set :fonts_dir, 'fonts'
 
-set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+activate :syntax
+set :markdown, fenced_code_blocks: true, input: "GFM", :tables => true, math_engine: "katex"
 
 ignore 'templates/*'
 ignore 'components/*'
@@ -41,18 +41,8 @@ include Helpers
 helpers Helpers
 
 after_configuration do
-  problems = load_problems()
-  puts problems
+  problems = load_problems("problemes", @app.data.problemes)
   problems.each do |ruta, obj|
-    puts ruta
-    proxy ruta, "/templates/problem.html", :locals => { :problem => obj }
+    proxy "#{ruta}.html", "/templates/problem.html", :layout => "layout", :locals => { :problem => obj }
   end
 end
-
-# after_configuration do
-#   puts data.problems
-#   data.each do |key, obj|
-#     puts key
-#   end
-# end
-

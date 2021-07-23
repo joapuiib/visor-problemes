@@ -1,7 +1,7 @@
 module Helpers
   def markdown(text=nil)
     text ||= yield
-    return Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true).render(text)
+    # return Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true).render(text)
   end
 
   def load_problems(name=nil, folder=nil)
