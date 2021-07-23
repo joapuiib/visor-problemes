@@ -36,17 +36,23 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 ignore 'templates/*'
 ignore 'components/*'
 
-# require "lib/helpers"
-# include Helpers
-# helpers Helpers
+require "lib/helpers"
+include Helpers
+helpers Helpers
 
 after_configuration do
-  puts data.problems
-  data.each do |key, obj|
-    puts key
+  problems = load_problems()
+  puts problems
+  problems.each do |ruta, obj|
+    puts ruta
+    proxy ruta, "/templates/problem.html", :locals => { :problem => obj }
   end
 end
 
-# problems.each do |ruta, obj|
-#   proxy ruta, "/templates/problem.html", :locals => { :problem => obj }
+# after_configuration do
+#   puts data.problems
+#   data.each do |key, obj|
+#     puts key
+#   end
 # end
+
