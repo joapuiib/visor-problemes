@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/joapuiib/visor-problemes#readme",
   "dependencies": {
+    "@babel/core": "^7.14.8",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.2.0",
