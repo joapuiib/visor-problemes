@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Middleman</title>
+    <link href="../../../../stylesheets/site.css" rel="stylesheet" />
+      <link href="../../../../stylesheets/tab.css" rel="stylesheet" /><link href="../../../../stylesheets/code.css" rel="stylesheet" />
+  <script src="../../../../javascripts/tab.js"></script><script src="../../../../javascripts/code.js"></script>
+
+  </head>
+  <body>
+    <header>
+    <nav>
+  <ul>
+    <li><a href="/index.html">Visor problemes</a></li>
+    <li><a href="/problemes/exemple_problema/00_AirContamination.html">Problema</a></li>
+    <li><a href="/bibliografia.html">Bibliografia</a></li>
+  </ul>
+</nav>
+
+    </header>
+    <div class="container">
+      
+
+
+
+<h1 id="hola">Hola</h1>
+
+<div class="problem-container">
+  <h1 id="exercici-10-gestiousuaris">Exercici 10: GestioUsuaris</h1>
+  <ul>
+    <li>Relitza aquest exercici en el subpackage extraordinaria.uf4.gestiousuaris</li>
+  </ul>
+
+  <p>Es vol realitzar un programa per gestionar els usuaris de l'ITB</p>
+
+  <p>Cada usuari té les següents característiques:</p>
+  <ul>
+    <li>Nom</li>
+    <li>Primer cognom</li>
+    <li>Segon cognom</li>
+    <li>Data de naixement</li>
+  </ul>
+
+  <p>A més, volem identificar també els diferents estudiants, que tindran la següent informació:</p>
+  <ul>
+    <li>Nom</li>
+    <li>Primer cognom</li>
+    <li>Segon cognom</li>
+    <li>Data de naixement</li>
+    <li>Data de matriculació</li>
+  </ul>
+
+  <p>El programa ha de generar el correu electrònic de cada usuari amb el següent format:</p>
+  <ul>
+    <li><strong>nom.primer@itb.cat</strong></li>
+  </ul>
+
+  <p>En el cas dels estudiants, també inclourà l'any de matriculació en hexadecimal:</p>
+  <ul>
+    <li><strong>nom.primer.hex@itb.cat</strong>. Podeu obtindre el codi hexadecimal amb Integer.toHexString(int)</li>
+  </ul>
+
+  <p>Es demana fer un programa que cree per defecte els següents estudiants i els mostre en el següent format:</p>
+  <ul>
+    <li>Usuari{nom: "Dani", primerCognom: "Carrasco", segonCognom: "Morera", dataNaixement:"04/09/1986"}</li>
+    <li>Usuari{nom: "Laura", primerCognom: "Ivars", segonCognom: "Perelló", dataNaixement:"17/05/1996"}</li>
+    <li>Estudiant{nom: "Aitana", primerCognom: "Sanchis", segonCognom: "Marí", dataNaixement: "20/11/2001", dataMatriculacio: 2020}</li>
+  </ul>
+
+  <div id="testcase1">
+  <h2>Casos de prova</h2>
+  <div class="tab_header">
+      <button id="testcase1_defaultOpen" class="tablinks" onclick="loadTestcase(event, 'testcase1', 'public_test')">public_test</button>
+  </div>
+  <div class="tab_row">
+    <div class="tab_column">
+      <h3>In:</h3>
+      
+<div class="code">
+  <div class="toolbar-container">
+    <div class="toolbar">
+      <img src="../../../../images/selectAll.svg" title="Seleccionar tot" onclick="selectAll(event)" />
+      <img src="../../../../images/copy.svg" title="Copiar a porta-retalls" onclick="copyClipboard(event)" />
+    </div>
+  </div>
+  <pre id="testcase1_in"></pre>
+</div>
+
+    </div>
+    <div class="tab_column">
+      <h3>Out:</h3>
+      
+<div class="code">
+  <div class="toolbar-container">
+    <div class="toolbar">
+      <img src="../../../../images/selectAll.svg" title="Seleccionar tot" onclick="selectAll(event)" />
+      <img src="../../../../images/copy.svg" title="Copiar a porta-retalls" onclick="copyClipboard(event)" />
+    </div>
+  </div>
+  <pre id="testcase1_out"></pre>
+</div>
+
+    </div>
+  </div>
+
+    <div id="testcase1_in_public_test" class="tabcontent"></div>
+    <div id="testcase1_out_public_test" class="tabcontent">Nom: Dani
+Cognoms: Carrasco Morera
+Data de naixement: 04/09/1986
+Correu electrònic: dani.carrasco@itb.cat
+
+Nom: Laura
+Cognoms: Ivars Perelló
+Data de naixement: 17/05/1996
+Correu electrònic: laura.ivars@itb.cat
+
+Nom: Aitana
+Cognoms: Sanchis Marí
+Data de naixement: 20/11/2001
+Correu electrònic: aitana.sanchis.7e4@itb.cat</div>
+
+  <script>document.getElementById('testcase1_defaultOpen').click();</script>
+</div>
+
+</div>
+
+
+    </div>
+  </body>
+</html>

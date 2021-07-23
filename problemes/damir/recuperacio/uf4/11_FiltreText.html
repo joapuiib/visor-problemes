@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Middleman</title>
+    <link href="../../../../stylesheets/site.css" rel="stylesheet" />
+      <link href="../../../../stylesheets/tab.css" rel="stylesheet" /><link href="../../../../stylesheets/code.css" rel="stylesheet" />
+  <script src="../../../../javascripts/tab.js"></script><script src="../../../../javascripts/code.js"></script>
+
+  </head>
+  <body>
+    <header>
+    <nav>
+  <ul>
+    <li><a href="/index.html">Visor problemes</a></li>
+    <li><a href="/problemes/exemple_problema/00_AirContamination.html">Problema</a></li>
+    <li><a href="/bibliografia.html">Bibliografia</a></li>
+  </ul>
+</nav>
+
+    </header>
+    <div class="container">
+      
+
+
+
+<h1 id="hola">Hola</h1>
+
+<div class="problem-container">
+  <h1 id="exercici-11-filtretext">Exercici 11: FiltreText</h1>
+
+  <p>Es demana realitzar una aplicació que permeti aplicar "filtres" a un text. Tots els filtres creats han de contindre el mètode <strong>String filterText(String text)</strong>.
+Es demana crear les estructures necessàries per garantitzar que tots els filtres tinguen aquest mètode.</p>
+
+  <p>Els filtres que es volen crear son:</p>
+  <ul>
+    <li>UpperCaseFilter: Passa tot el text a majúscula.</li>
+    <li>SwitchCaseFilter: EL text anirà alternant entre majúscules i minúscules. Comença en minúscula.</li>
+    <li>ReverseFilter: Li dona la volta al tot el text.</li>
+  </ul>
+
+  <p>El programa rebrà un text i aplicarà els tres filtres anteriors.</p>
+
+  <div id="testcase1">
+  <h2>Casos de prova</h2>
+  <div class="tab_header">
+      <button id="testcase1_defaultOpen" class="tablinks" onclick="loadTestcase(event, 'testcase1', 'public_test')">public_test</button>
+  </div>
+  <div class="tab_row">
+    <div class="tab_column">
+      <h3>In:</h3>
+      
+<div class="code">
+  <div class="toolbar-container">
+    <div class="toolbar">
+      <img src="../../../../images/selectAll.svg" title="Seleccionar tot" onclick="selectAll(event)" />
+      <img src="../../../../images/copy.svg" title="Copiar a porta-retalls" onclick="copyClipboard(event)" />
+    </div>
+  </div>
+  <pre id="testcase1_in"></pre>
+</div>
+
+    </div>
+    <div class="tab_column">
+      <h3>Out:</h3>
+      
+<div class="code">
+  <div class="toolbar-container">
+    <div class="toolbar">
+      <img src="../../../../images/selectAll.svg" title="Seleccionar tot" onclick="selectAll(event)" />
+      <img src="../../../../images/copy.svg" title="Copiar a porta-retalls" onclick="copyClipboard(event)" />
+    </div>
+  </div>
+  <pre id="testcase1_out"></pre>
+</div>
+
+    </div>
+  </div>
+
+    <div id="testcase1_in_public_test" class="tabcontent">There is only one problem with common sense; it’s not very common.</div>
+    <div id="testcase1_out_public_test" class="tabcontent">THERE IS ONLY ONE PROBLEM WITH COMMON SENSE; IT’S NOT VERY COMMON.
+tHeRe iS OnLy oNe pRoBlEm wItH CoMmOn sEnSe; It’s nOt vErY CoMmOn.
+.nommoc yrev ton s’ti ;esnes nommoc htiw melborp eno ylno si erehT</div>
+
+  <script>document.getElementById('testcase1_defaultOpen').click();</script>
+</div>
+
+</div>
+
+
+    </div>
+  </body>
+</html>
