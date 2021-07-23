@@ -32,9 +32,21 @@ set :fonts_dir, 'fonts'
 
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
-helpers do 
-  def markdown(text=nil)
-    text ||= yield
-    return Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true).render(text)
+
+ignore 'templates/*'
+ignore 'components/*'
+
+# require "lib/helpers"
+# include Helpers
+# helpers Helpers
+
+after_configuration do
+  puts data.problems
+  data.each do |key, obj|
+    puts key
   end
 end
+
+# problems.each do |ruta, obj|
+#   proxy ruta, "/templates/problem.html", :locals => { :problem => obj }
+# end

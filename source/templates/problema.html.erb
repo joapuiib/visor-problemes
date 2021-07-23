@@ -1,0 +1,11 @@
+
+<% content_for :title do %>
+  <%= problem.name -%>
+<% end %>
+
+<% content_for :assets do %>
+  <%= stylesheet_link_tag 'tab', 'code' %>
+  <%= javascript_include_tag 'tab', 'code' %>
+<% end %>
+
+<%= partial("/components/problem", locals: {problem: problem}) %>

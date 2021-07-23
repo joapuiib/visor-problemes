@@ -12,6 +12,11 @@
     <%= yield_content :assets %>
   </head>
   <body>
-    <%= yield %>
+    <header>
+    <%= partial("/components/nav") %>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
