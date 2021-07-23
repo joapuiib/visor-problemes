@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Problema</title>
+    <link href="stylesheets/site.css" rel="stylesheet" />
+      <link href="stylesheets/tab.css" rel="stylesheet" /><link href="stylesheets/code.css" rel="stylesheet" />
+  <script src="javascripts/tab.js"></script><script src="javascripts/code.js"></script>
+
+  </head>
+  <body>
+    
+<header>
+<nav>
+  <ul>
+    <li><a href="index.html">Visor problemes</a></li>
+    <li><a href="problema.html">Problema</a></li>
+    <li><a href="bibliografia.html">Bibliografia</a></li>
+  </ul>
+</nav>
+
+</header>
+
+
+
+<div class="problem-container">
+  <div id="enunciat">
+    <!--h1>AirContamination</h1-->
+      <h1>AirContamination</h1>
+
+<p>Es vol un estudi de la contaminació atmosfèrica a la teva escola. 
+Per fer-ho, s&#39;instal·la un petit sensor que cada hora enregistra la qualitat de l&#39;aire actual, que medeix la contaminació i proporciona un
+enter entre 0 i 1000. Un cop obtinguts tots els valors vols coneixer quans dies la contaminació han estat per sobre de la mitjana.</p>
+
+<h2>Entrada</h2>
+
+<p>L&#39;entrada consisteix amb el nombre N valors de contaminació proporcionats pel sensor i els valors proporcionats.</p>
+
+<h2>Sortida</h2>
+
+<p>S&#39;ha de mostrar la contaminació mitjana amb <strong>dos decimals</strong> i indicar el nombre de dies que han superat la contaminació mitjana.</p>
+
+  </div>
+
+  
+
+<div id=testcase1>
+  <h2>Casos de prova</h2>
+  <div class="tab_header">
+      <button id=testcase1_defaultOpen class="tablinks" onclick="loadTestcase(event, 'testcase1', 'public_test')">public_test</button>
+      <button  class="tablinks" onclick="loadTestcase(event, 'testcase1', 'another_public_test')">another_public_test</button>
+  </div>
+  <div class="tab_row">
+    <div class="tab_column">
+      <h3>In:</h3>
+      
+<div class="code">
+  <div class="toolbar-container">
+    <div class="toolbar">
+      <img src="images/selectAll.svg" title="Seleccionar tot" onclick="selectAll(event)">
+      <img src="images/copy.svg" title="Copiar a porta-retalls" onclick="copyClipboard(event)">
+    </div>
+  </div>
+  <pre id=testcase1_in ></pre>
+</div>
+
+    </div>
+    <div class="tab_column">
+      <h3>Out:</h3>
+      
+<div class="code">
+  <div class="toolbar-container">
+    <div class="toolbar">
+      <img src="images/selectAll.svg" title="Seleccionar tot" onclick="selectAll(event)">
+      <img src="images/copy.svg" title="Copiar a porta-retalls" onclick="copyClipboard(event)">
+    </div>
+  </div>
+  <pre id=testcase1_out ></pre>
+</div>
+
+    </div>
+  </div>
+
+    <div id=testcase1_in_public_test class="tabcontent">5
+55 75 40 100 22
+</div>
+    <div id=testcase1_out_public_test class="tabcontent">Contaminació mijana: 58.40
+Dies amb contaminació superior: 2
+</div>
+    <div id=testcase1_in_another_public_test class="tabcontent">3
+10 25 55
+</div>
+    <div id=testcase1_out_another_public_test class="tabcontent">Contaminació mijana: 30.00
+Dies amb contaminació superior: 1
+</div>
+
+  <script>document.getElementById('testcase1_defaultOpen').click();</script>
+</div>
+
+</div>
+
+
+  </body>
+</html>
