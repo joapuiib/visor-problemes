@@ -8,4 +8,5 @@ title: Problema
 <% end %>
 
 <% problem_path = :'problemes/exemple_problema/00_AirContamination' %>
+<% problem = config.problems[problem_path] %>
 <%= partial("/components/problem", locals: {problem: problem}) %>
