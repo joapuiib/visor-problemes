@@ -42,6 +42,7 @@
   <div id="testcase1">
   <h2>Casos de prova</h2>
   <div class="tab_header">
+      <button id="testcase1_defaultOpen" class="tablinks" onclick="loadTestcase(event, 'testcase1', 'public_test')">public_test</button>
   </div>
   <div class="tab_row">
     <div class="tab_column">
@@ -74,6 +75,48 @@
     </div>
   </div>
 
+    <div id="testcase1_in_public_test" class="tabcontent">NEW
+9274RMH
+Seat
+León
+2017
+Gasolina
+NEXT
+NEXT
+NEW
+8694PNC
+BMW
+X2
+2021
+Gasolina
+NEW
+3086XKH
+Mercedes
+GLA
+2010
+Diesel
+NEXT
+6575FNE
+BMW
+X8
+2017
+Diesel
+NEW
+8198YIY
+Peugeot
+308
+2017
+Gasolina
+NEXT
+END
+</div>
+    <div id="testcase1_out_public_test" class="tabcontent">9274RMH - Seat León (2017, Gasolina)
+No hi ha cap vehicle esperant a ser revisat.
+8694PNC - BMW X2 (2021, Gasolina)
+3086XKH - Mercedes GLA (2010, Diesel)
+Vehicles pendents de revisar:
+8198YIY - Peugeot 308 (2017, Gasolina)
+</div>
 
   <script>document.getElementById('testcase1_defaultOpen').click();</script>
 </div>

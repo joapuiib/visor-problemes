@@ -43,6 +43,7 @@ enter entre 0 i 1000. Un cop obtinguts tots els valors vols coneixer quans dies 
   <div class="tab_header">
       <button id="testcase1_defaultOpen" class="tablinks" onclick="loadTestcase(event, 'testcase1', 'public_test')">public_test</button>
       <button class="tablinks" onclick="loadTestcase(event, 'testcase1', 'another_public_test')">another_public_test</button>
+      <button class="tablinks" onclick="loadTestcase(event, 'testcase1', 'my_sample_test')">my_sample_test</button>
   </div>
   <div class="tab_row">
     <div class="tab_column">
@@ -86,6 +87,11 @@ Dies amb contaminació superior: 2
 </div>
     <div id="testcase1_out_another_public_test" class="tabcontent">Contaminació mijana: 30.00
 Dies amb contaminació superior: 1
+</div>
+    <div id="testcase1_in_my_sample_test" class="tabcontent">5 55 75 40 100 22
+</div>
+    <div id="testcase1_out_my_sample_test" class="tabcontent">Contaminació mijana: 58.40
+Dies amb contaminació superior: 2
 </div>
 
   <script>document.getElementById('testcase1_defaultOpen').click();</script>
