@@ -3,6 +3,6 @@ title: Visor de problemes
 ---
 
 # Visor de problemes
-<% load_problems().each do |key, problem| %>
+<% config.problems.each do |key, problem| %>
   * <%= link_to problem.name, key %>
 <% end %>

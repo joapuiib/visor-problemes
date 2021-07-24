@@ -39,11 +39,9 @@ ignore 'components/*'
 
 require "lib/helpers"
 include Helpers
-helpers Helpers
 
-after_configuration do
-  problems = load_problems("problemes", @app.data.problemes)
-  problems.each do |ruta, obj|
-    proxy "#{ruta}.html", "/templates/problem.html", :layout => "layout", :locals => { :problem => obj }
-  end
+problems = load_problems("problemes", @app.data.problemes)
+problems.each do |ruta, obj|
+  proxy "#{ruta}.html", "/templates/problem.html", :layout => "layout", :locals => { :problem => obj }
 end
+set :problems, problems

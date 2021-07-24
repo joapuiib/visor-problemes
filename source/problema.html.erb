@@ -7,4 +7,5 @@ title: Problema
   <%= javascript_include_tag 'tab', 'code' %>
 <% end %>
 
-<%= partial("/components/problem", locals: {problem: data.problemes.exemple_problema["00_AirContamination"]}) %>
+<% problem_path = :'problemes/exemple_problema/00_AirContamination' %>
+<%= partial("/components/problem", locals: {problem: problem}) %>

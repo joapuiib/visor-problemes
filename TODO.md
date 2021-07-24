@@ -1,3 +1,3 @@
 - Empty testcase tab header
 - Empty code snnipet
-- Markdown links target=_blank
+- Markdown links target=\_blank => use link\_to helper
