@@ -4,12 +4,14 @@
   <%#= javascript_include_tag 'code' %>
 <%# end %>
 
-<div class="code">
-  <div class="toolbar-container">
+<% content ||= "" %>
+<div <%= if defined?(pre_id) then "id=#{pre_id}" end %> class="code-container">
+  <div class="toolbar-container<%= if content.empty? then ' empty' end %>">
     <div class="toolbar">
       <img src="/images/selectAll.svg" title="Seleccionar tot" onclick="selectAll(event)">
       <img src="/images/copy.svg" title="Copiar a porta-retalls" onclick="copyClipboard(event)">
     </div>
   </div>
-  <pre <%= if defined?(pre_id) then "id=#{pre_id}" end %> ><%= if defined?(content) then "#{content}" end %></pre>
+    <div class="code-empty" <%= if !content.empty? then 'style="display: none"' end %>>&lt;buit&gt;</div>
+    <pre class="code"><%= content %></pre>
 </div>

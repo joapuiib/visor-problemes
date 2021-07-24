@@ -8,8 +8,8 @@ function loadTestcase(evt, id, testcaseName) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   var _in = document.getElementById(id + "_in_" + testcaseName).innerHTML;
   var _out = document.getElementById(id + "_out_" + testcaseName).innerHTML;
-  document.getElementById(id + "_in").innerHTML = _in;
-  document.getElementById(id + "_out").innerHTML = _out;
+  setCodeContent($("#" + id + "_in"), _in);
+  setCodeContent($("#" + id + "_out"), _out);
   evt.currentTarget.className += " active";
 }
 

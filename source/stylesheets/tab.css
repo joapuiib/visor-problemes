@@ -6,14 +6,21 @@
 }
 
 /* Style the buttons that are used to open the tab content */
-.tab_header button {
+.tab_header button, .tab_header div.empty_tab_header {
   background-color: inherit;
-  float: left;
   border: none;
   outline: none;
-  cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  text-align: center;
+}
+.tab_header button {
+  float: left;
+  cursor: pointer;
+}
+.tab_header div.empty_tab_header {
+  color: rgba(0, 0, 0, 0.5);
+  cursor: default;
 }
 
 /* Change background color of buttons on hover */

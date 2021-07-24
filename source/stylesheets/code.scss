@@ -1,8 +1,8 @@
-.code {
+.code-container {
   padding: 12px;
   border: 1px dashed #ccc;
 }
-.code pre {
+.code-container pre.code {
     margin: 0;
 }
 
@@ -35,7 +35,12 @@
     margin: 3px;
 }
 
-:hover>.toolbar-container {
+:hover >.toolbar-container:not(.empty) {
     display: block;
 }
 
+.code-empty {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: default;
+}

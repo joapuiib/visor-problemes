@@ -10,6 +10,9 @@
 <div id=<%= "#{id}" %>>
   <h2>Casos de prova</h2>
   <div class="tab_header">
+    <% if testcases.length == 0 %>
+      <div class="empty_tab_header">No s'ha trobat cap cas de prova</div>
+    <% end %>
     <% testcases.each_with_index do |testcase, index| %>
       <button <%= if index == 0 then "id=#{id}_defaultOpen" end %> class="tablinks" onclick="loadTestcase(event, '<%=id%>', '<%=testcase.name%>')"><%=testcase.name%></button>
     <% end %>

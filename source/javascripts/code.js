@@ -25,8 +25,23 @@ function copyClipboard(evt) {
 }
 
 function getCodePre(element){
-    return $(element).closest('div[class=code]').find("pre")
+    return $(element).closest('div[class=code-container]').find("pre")
 }
 
-window.selectAll= selectAll;
-window.copyClipboard= copyClipboard;
+function setCodeContent(element, content){
+    var $pre = $(element).find('pre');
+    var $empty = $(element).find('.code-empty');
+    var $toolbar = $(element).find('.toolbar-container');
+    $pre.text(content);
+    if(content){
+        $empty.css("display", "none");
+        $toolbar.removeClass("empty");
+    }else{
+        $empty.css("display", "block");
+        $toolbar.addClass("empty");
+    }
+}
+
+window.selectAll = selectAll;
+window.copyClipboard = copyClipboard;
+window.setCodeContent = setCodeContent;

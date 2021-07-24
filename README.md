@@ -5,6 +5,4 @@ continguts en el repositori [Problemes de programació](https://github.com/joapu
 La web es desplega automàticament a GitHub Pages a aquest enllaç: https://joapuiib.github.io/visor-problemes/
 
 # TODO
-- Empty testcase tab header
-- Empty code snnipet
 - Markdown links target=\_blank => use link\_to helper
