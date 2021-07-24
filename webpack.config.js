@@ -17,7 +17,8 @@ module.exports = {
       // site: ["./assets/javascripts/site.js", "./assets/stylesheets/site.scss"],
       site: "./source/stylesheets/site.scss",
       tab: ["./source/javascripts/tab.js", "./source/stylesheets/tab.css"],
-      code: ["./source/javascripts/code.js", "./source/stylesheets/code.scss"]
+      code: ["./source/javascripts/code.js", "./source/stylesheets/code.scss"],
+      accordion: ["./source/javascripts/accordion.js", "./source/stylesheets/accordion.css"],
   },
   output: {
     path: path.resolve(__dirname, '.dist'),

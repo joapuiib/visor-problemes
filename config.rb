@@ -37,8 +37,11 @@ set :markdown, fenced_code_blocks: true, input: "GFM", :tables => true, math_eng
 ignore 'templates/*'
 ignore 'components/*'
 
+require "lib/config_helpers"
+include ConfigHelpers
+
 require "lib/helpers"
-include Helpers
+helpers Helpers
 
 problems = load_problems("problemes", @app.data.problemes)
 problems.each do |ruta, obj|

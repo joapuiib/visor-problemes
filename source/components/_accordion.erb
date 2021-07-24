@@ -1,0 +1,15 @@
+<%# Remember to add the code.css to the :assets %>
+<%# content_for :assets do %>
+  <%#= stylesheet_link_tag 'accordion' %>
+  <%#= javascript_include_tag 'accordion' %>
+<%# end %>
+
+<% items ||= {} %>
+<div <%= if defined?(id) then "id=\"#{id}\"" end %>>
+  <% items.each do |title, content| %>
+    <div class="accordion">
+      <button class="accordion-header" onclick="onclickAccordion(event)"><%= title %></button>
+      <div class="accordion-content"><%= content %></div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,11 @@
+---
+title: Dades i variables
+---
+<% content_for :assets do %>
+  <%= stylesheet_link_tag 'accordion', 'tab', 'code' %>
+  <%= javascript_include_tag 'accordion', 'tab', 'code' %>
+<% end %>
+
+<% problems = ["AirContamination", "FiltreText"] %>
+<% items = Hash[problems.collect {|el| [el, partial("/components/problem", locals: {problem: selectProblem(el)}) ] }] %>
+<%= partial("/components/accordion", locals: {id: "accordion", items: items}) %>
