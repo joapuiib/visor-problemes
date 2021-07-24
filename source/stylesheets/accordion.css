@@ -26,11 +26,12 @@
   overflow: hidden;
   border: 1px;
   border-style: solid;
-  border-color: #ccc;
+  border-color: #ddd;
   transition: max-height 0.2s ease-out;
 }
 .accordion-content-active {
-  max-height: 100em;
+  /* max-height: 100em; */
+  border-color: #ccc;
 }
 
 .accordion-header:after {
