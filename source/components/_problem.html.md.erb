@@ -13,5 +13,5 @@
 <%= problem.postscript %>
 {::options parse_block_html="false" /}
 
-<%= partial("/components/tab", locals: {id: "testcase1", testcases: problem['tests'].select {|test| !test['name'].start_with?("_")}}) %>
+<%= partial("/components/tab", locals: {id: "testcase_#{problem.name}", testcases: problem['tests'].select {|test| !test['name'].start_with?("_")}}) %>
 </div>

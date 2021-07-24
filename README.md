@@ -6,3 +6,4 @@ La web es desplega automàticament a GitHub Pages a aquest enllaç: https://joap
 
 # TODO
 - Markdown links target=\_blank => use link\_to helper
+- Resize accordion on resize
